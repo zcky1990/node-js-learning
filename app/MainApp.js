@@ -16,7 +16,7 @@ app.listen(port, () => {
 });
 
 
-const wiki = require("./controllers/api/test");
+const wiki = require("./controllers/api/example");
 app.use("/api/v1", wiki);
 
 const test = require("./controllers/index");
