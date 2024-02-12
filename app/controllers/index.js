@@ -73,7 +73,8 @@ router.get("/", function (req, res) {
 				}
 			],
 			envelop: {
-				background: 'https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/bg-03.jpg'
+				// backgroundImage: 'https://websitedemos.net/fiona-patisserie-04/wp-content/uploads/sites/1136/2022/11/bg-03.jpg',
+				backgroundColor: '#f9f3ed'
 			},
 			gallery: [
 			],

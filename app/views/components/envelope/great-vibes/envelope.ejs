@@ -1,5 +1,7 @@
-<div id="envelop" name="envelope" class="fixed top-0 left-0 right-0 w-full h-screen bg-no-repeat bg-cover md:h-screen lg:h-screen xl:h-screen 2xl:h-screen" style='background-image: url("<%= data.background %>")'>
-    <div class="flex flex-col content-center h-full text-center place-content-center">
+
+<% if ( data.backgroundImage !== undefined) { %>
+    <div id="envelop" name="envelope" class="fixed top-0 left-0 right-0 w-full h-screen bg-no-repeat bg-cover md:h-screen lg:h-screen xl:h-screen 2xl:h-screen" style='background-image: url("<%= data.backgroundImage %>")'>
+        <div class="flex flex-col content-center h-full text-center place-content-center">
         <div id="envelope-title" name="top" class="text-3xl text-white font-vibes md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl" >The Wedding Of</div>
         <div name="spacer" class="h-2/4"></div>
         <div name="bottom" class="container mx-auto">
@@ -11,6 +13,21 @@
         </div>
     </div>
 </div>
+<%} else { %>
+        <div id="envelop" name="envelope" class="fixed top-0 left-0 right-0 w-full h-screen md:h-screen lg:h-screen xl:h-screen 2xl:h-screen" style="background-color: <%= data.backgroundColor %>">
+            <div class="flex flex-col content-center h-full text-center place-content-center">
+                <div id="envelope-title" name="top" class="text-3xl text-white font-vibes md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl" >The Wedding Of</div>
+                <div name="spacer" class="h-2/4"></div>
+                <div name="bottom" class="container mx-auto">
+                    <div class="flex flex-col gap-2 place-items-center">
+                        <div id="bride-and-groom" name="bride-and-groom" class="text-3xl text-white font-vibes md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl">Groom & Bride</div>
+                        <div name="wedding-date" class="text-xl text-white font-playfair md:text-3xl lg:text-3xl xl:text-3xl 2xl:text-3xl">21 . 03 . 2024</div>
+                        <div id="envelope-button" name="button" class="px-3 py-2 text-sm text-white rounded-full md:text-sm lg:text-sm xl:text-sm 2xl:text-sm bg-cyan-800 w-max font-playfair">Buka Undangan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<% } %>
 <script>
     document.addEventListener("DOMContentLoaded", function(event) { 
         let button = document.querySelector("#envelope-button");
