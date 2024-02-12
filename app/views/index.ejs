@@ -8,6 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-      <%- include('components/envelope/great-vibes/envelope.ejs',{data: envelop}); %>
+      <%- include('components/envelope/great-vibes/envelope.ejs',{ data: envelop, bride: bride, groom: groom, wedding: wedding }); %>
+      <%- include('components/quote/great-vibes/quote.ejs'); %>
   </body>
 </html>
